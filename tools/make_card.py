@@ -8,7 +8,7 @@ spec.json keys:
   sections list of [label, text] in order:
            Provision of Law, Field of Application, Citation, Ratio
            (Ratio is ONE paragraph, no bullets)
-  source   short source credit
+  (any "source" key is ignored: no source credit is ever shown on a card)
 The footer (firm name, advocate, email, landline, mobile) is added to every card.
 """
 import json, sys
@@ -76,7 +76,7 @@ def draw_card(s, k):
     for ln in FOOTER:
         d.text((M, yy), ln, font=f_c, fill=MUTED); yy += 28
     f_src = font(SANS, 17)
-    d.text((M, yy + 6), "General information, not legal advice. Source: " + s["source"], font=f_src, fill=(130, 142, 165))
+    d.text((M, yy + 6), "General information, not legal advice.", font=f_src, fill=(130, 142, 165))
     return img, fits
 
 def main(spec_path, out_path):
