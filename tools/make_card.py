@@ -76,7 +76,8 @@ def draw_card(s, k):
     for ln in FOOTER:
         d.text((M, yy), ln, font=f_c, fill=MUTED); yy += 28
     f_src = font(SANS, 17)
-    d.text((M, yy + 6), "General information, not legal advice.", font=f_src, fill=(130, 142, 165))
+    d.text((M, yy + 6), "Disclaimer: General information based on the author's own interpretation of the judgment;", font=f_src, fill=(130, 142, 165))
+    d.text((M, yy + 28), "not legal advice. Please read the full judgment and take professional advice before acting.", font=f_src, fill=(130, 142, 165))
     return img, fits
 
 def main(spec_path, out_path):
