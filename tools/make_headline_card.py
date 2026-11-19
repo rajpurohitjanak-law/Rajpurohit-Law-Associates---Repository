@@ -157,8 +157,9 @@ def draw_card(s, size):
     dome(d, W - 56 - 400, H - 110 - 300, 400 / 440)
     # footer
     d.rectangle([0, P(H - 110), P(W), P(H - 107)], fill=GOLD)
-    d.text((P(M), P(H - 86)), "Rajpurohit Law Associates · Janak Rajpurohit – Advocate", font=sans(21, "SemiBold"), fill=GOLD)
-    d.text((P(M), P(H - 50)), "rajpurohit.office@gmail.com · Land Line – 07948996598 · Mobile – 9624912346", font=sans(19, "Regular"), fill=IVORY)
+    d.text((P(M), P(H - 98)), "Rajpurohit Law Associates · Janak Rajpurohit – Advocate", font=sans(21, "SemiBold"), fill=GOLD)
+    d.text((P(M), P(H - 66)), "rajpurohit.office@gmail.com · Land Line – 07948996598 · Mobile – 9624912346", font=sans(19, "Regular"), fill=IVORY)
+    d.text((P(M), P(H - 34)), "Disclaimer: general information based on the author's own interpretation of the judgment; not legal advice.", font=sans(15, "Regular"), fill=MUTED)
     return img, fits
 
 def main(spec_path, out_path):
